@@ -91,6 +91,7 @@ int main()
 int getIndexWrap (const int numbers[],const int &numElements)
 {
     int value;
+    cout << "Value: ";
     cin >> value;
     return  getIndex(numbers, numElements, value);
 }
@@ -98,6 +99,7 @@ int getIndexWrap (const int numbers[],const int &numElements)
 void appendWrap(int numbers[], int &numElements,const int CAPACITY)
 {
     int value;
+    cout << "Value: ";
     cin >> value;
     append(numbers, numElements, CAPACITY, value);
 }
@@ -105,13 +107,17 @@ void appendWrap(int numbers[], int &numElements,const int CAPACITY)
 void instertAtWrap(int *numbers, int &numElements, const int CAPACITY)
 {
     int value, index;
-    cin >> value >> index;
+    cout << "Value: ";
+    cin >> value;
+    cout << "Index: ";
+    cin >> index;
     instertAt(numbers, numElements, CAPACITY, value, index);
 }
 
 bool removeElementWrap (int numbers[], int &numElements)
 {
     int value;
+    cout << "Value: ";
     cin >> value;
     return removeElement(numbers, numElements, value);
 }
