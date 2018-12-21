@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 
@@ -156,11 +155,14 @@ void output(const int numbers[],const int &numElements)
 
 int getIndex (const int numbers[],const int &numElements,const int value)
 {
-    const int* iter = find(numbers, numbers + numElements, value);
-    if (iter == numbers + numElements)
+    int ind;
+    for (ind = 0; ind < numElements && numbers[ind] == value; ind++)
+        ;
+
+    if (ind == numElements)
         return -1;
     else
-        return iter - numbers;
+        return ind;
 }
 
 void append(int numbers[], int &numElements, const int CAPACITY, const int value)
